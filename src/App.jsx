@@ -17,7 +17,7 @@ function Link({ to, ...restProps }) {
 }
 
 function App() {
-  const [stateModule, setModule] = useState('/home');
+  const [stateModule, setModule] = useState(() => history.location.pathname);
   const [stateLoader, setLoader] = useState('loading');
   const [stateData, setData] = useState({});
   const [StateComp, setComp] = useState(BlankComp);
